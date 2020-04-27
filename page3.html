@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<head>
+<style>
+body
+{
+background-color:red;
+}
+#image-data{
+width:400px;
+height:100%;
+border:2px solid red;
+margin:20px auto 20px auto;
+border-radius:10px;
+box-shadow:0px opx 20px black;
+
+}
+</style>
+</head>
+
+
+<body onload=set_time()>
+<div id="image-data">
+<img src="annu.jpg" width="400" height="100%" id="data">
+</div>
+<script>
+var start=1;
+function set_time()
+{
+setInterval(image_show,1000);
+}
+function image_show()
+{
+var image_data;
+if(start==1)
+{
+image_data="images1.jpeg";
+}
+else if(start==2)
+{
+image_data="IMG-20190724-WA0024.jpg";
+}
+else if(start==3)
+{
+image_data="IMG-20190724-WA0033.jpg";
+}
+else if(start==4)
+{
+image_data="IMG-20190724-WA0034.jpg";
+}
+else if(start==5)
+{
+image_data="IMG-20190725-WA0005.jpg";
+}
+else if(start==6)
+{
+image_data="IMG-20190725-WA0007.jpg";
+}
+else
+{
+start=1;
+}
+document.getElementById("data").src=""+image_data;
+start++;
+}
+
+</script>
+</body>
